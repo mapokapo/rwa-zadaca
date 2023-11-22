@@ -26,8 +26,8 @@ Projekt se pridržava sljedećih tehnologija i pravila:
 
 ## Odrađeni ciljevi
 
-- [ ] HTML5 validan (provjeriti na ponuđenim validatorima)
-- [ ] Mobile first (provjeriti na ponuđenim validatorima)
+- [x] HTML5 validan (provjeriti na ponuđenim validatorima)
+- [x] Mobile first (provjeriti na ponuđenim validatorima)
 - [x] Responsive
 - [x] Čisti HTML5 i CSS (bez framework-a)
 - [x] Meta tagovi
