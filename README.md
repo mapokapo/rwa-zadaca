@@ -1,4 +1,4 @@
-# RWA Zadaca Repository
+# RWA Zadaća Repository
 
 ## Opis zadatka
 
@@ -8,15 +8,15 @@
 
 Ovaj projekt je napravljen za kolegij Razvoj Web Aplikacija na FSRE-u.
 
-Tema projekta je web stranica koja sluzi kao neki izmisljeni servis koji pokazuje galeriju slika i fotografija po imenu **Shutterfake**. Sami dizajn i naziv stranice dolazi od servisa Shutterstock.
+Tema projekta je web stranica koja služi kao neki izmišljeni servis koji pokazuje galeriju slika i fotografija po imenu **Shutterfake**. Sami dizajn i naziv stranice dolazi od servisa Shutterstock.
 
-Projekt je osmisljen kao lista nasumicnih slika za prodaju koje su objavili zamisljeni profesionalni fotografi. Takodjer se moze naci lista "prica" koje pokazuju najpopularnije slike trenutnog dana i njihove autore.
+Projekt je osmišljen kao lista nasumičnih slika za prodaju koje su objavili zamišljeni profesionalni fotografi. Također se može naći lista "priča" koje pokazuju najpopularnije slike trenutnog dana i njihove autore.
 
-Takodjer postoji i dio za detaljni pregled slike i price, kao i dio za kontakt/opis stranice.
+Također postoji i dio za detaljni pregled slike i priće, kao i dio za kontakt/opis stranice.
 
-## Tehnicki opis projekta
+## Tehnički opis projekta
 
-Projekt se pridrzava sljedecih tehnologija i pravila:
+Projekt se pridržava sljedećih tehnologija i pravila:
 
 - Moderni HTML5 (semantic HTML)
 - BEM stil za CSS (Block-Element-Modifier)
@@ -24,13 +24,13 @@ Projekt se pridrzava sljedecih tehnologija i pravila:
 - CSS varijable za boje i fontove
 - Unsplash API za dobivanje slika
 
-## Odradjeni ciljevi
+## Odrađeni ciljevi
 
-- [ ] HTML5 validan (provjeriti na ponudjenim validatorima)
-- [ ] Mobile first (provjeriti na ponudjenim validatorima)
+- [ ] HTML5 validan (provjeriti na ponuđenim validatorima)
+- [ ] Mobile first (provjeriti na ponuđenim validatorima)
 - [x] Responsive
 - [x] Čisti HTML5 i CSS (bez framework-a)
-- [ ] Meta tagovi
+- [x] Meta tagovi
 - [x] Naslov projekta i tipografija (h1, h2... i paragrafi)
 - [x] Sadržaj (tekstualni i multimedijski)
 - [x] Slike
