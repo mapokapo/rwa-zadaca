@@ -1,5 +1,11 @@
 # RWA Zadaća Repository
 
+## Demo rjesenja
+
+Projekt je postavljen na javnu adresu putem Github Pages.
+
+Link: [https://mapokapo.github.io/rwa-zadaca/index.html](https://mapokapo.github.io/rwa-zadaca/index.html)
+
 ## Opis zadatka
 
 > Zadatak je napraviti prototip web sjedišta (HTML dokument) za proizvoljni projektni zadatak/temu, na način da je HTML5 validan i da je mobile first i/ili responsive. Uvjet je da se ne koristi neki od gotovih framework-a (Bootstrap, ZURB i sl.) – znači samo čisti HTML5 i CSS.
