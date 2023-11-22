@@ -34,9 +34,9 @@ Projekt se pridrzava sljedecih tehnologija i pravila:
 - [x] Naslov projekta i tipografija (h1, h2... i paragrafi)
 - [x] Sadržaj (tekstualni i multimedijski)
 - [x] Slike
-- [ ] Tablice
+- [x] Tablice
 - [x] Linkovi
-- [ ] Eksterni linkovi
+- [x] Eksterni linkovi
 - [x] Podatci o autoru (footer)
 
 ## Dodatni ciljevi
