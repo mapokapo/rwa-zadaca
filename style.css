@@ -473,12 +473,27 @@ table > tbody > tr > td:first-child {
 }
 
 @media only screen and (max-width: 950px) {
+  .header--text {
+    font-size: 1.5rem;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .image-details--info {
+    height: auto;
+  }
+  .image-details--info h1 {
+    font-size: 1.5rem;
+  }
+  .pad-right {
+    padding: 1rem 2rem !important;
   }
 }
 
 @media only screen and (max-width: 750px) {
+  .header--logo {
+    display: none;
+  }
   .wrapper {
     height: 100vh;
   }
@@ -524,6 +539,7 @@ table > tbody > tr > td:first-child {
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    height: auto;
   }
   .image-details--info > a {
     display: none;
