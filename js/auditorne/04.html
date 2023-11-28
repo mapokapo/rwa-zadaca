@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vjezbe</title>
+    <title>Vjezbe 04</title>
   </head>
   <body>
-    <h1>JS Skripte/vjezbe sa auditornih vjezbi</h1>
+    <h1>JS Skripte/vježbe sa auditornih vježbi (04)</h1>
     <script>
       function povrsina(a, b) {
         return a * b;
@@ -96,6 +96,18 @@
       }
 
       ispisiPosebne(strings);
+    </script>
+    <script>
+      const pas = {
+        ime: "Reks",
+        godina: 2,
+      };
+      pas.zvuk = function () {
+        return this.ime + " je rekao: AV AV!";
+      };
+
+      console.log(pas);
+      console.log(pas.zvuk());
     </script>
   </body>
 </html>
