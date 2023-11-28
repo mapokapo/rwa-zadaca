@@ -129,7 +129,25 @@ table > tbody > tr > td:first-child {
   font-weight: 600;
 }
 
+details > summary {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details > summary:hover {
+  color: #3498db;
+}
+
+details > ul {
+  padding-left: 0.5rem;
+}
 /* REUSABLE CLASSES */
+.vjezba {
+  padding: 1rem;
+}
+
 .row {
   display: flex;
 }
@@ -207,10 +225,26 @@ table > tbody > tr > td:first-child {
   height: 100%;
 }
 
+.nav--details {
+  width: 100%;
+}
+
+.nav--details > .nav--list {
+  height: auto;
+}
+
+.nav--details > .nav--list > .nav--item {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .nav--item {
   padding: 0.5rem;
-  border-bottom: 1px solid #bdc3c7;
   white-space: nowrap;
+}
+
+.nav--item:not(:last-child) {
+  border-bottom: 1px solid #bdc3c7;
 }
 
 /* MAIN (index.html) */
@@ -422,7 +456,6 @@ table > tbody > tr > td:first-child {
 .footer {
   width: 100%;
   padding: 0 5rem;
-  height: 5rem;
   background-color: #bdc3c7;
   z-index: 5;
   display: flex;
@@ -502,6 +535,16 @@ table > tbody > tr > td:first-child {
     justify-content: center;
     display: flex;
   }
+  .nav--details > summary {
+    text-align: center;
+  }
+  .nav--details > .nav--list {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .nav--details > .nav--list > .nav--item:not(:last-child) {
+    border-right: 1px solid #bdc3c7;
+  }
   #sidebar_and_content_container {
     flex-direction: column;
     height: 100%;
@@ -512,7 +555,7 @@ table > tbody > tr > td:first-child {
   }
   .main {
     flex: none;
-    height: 73vh;
+    height: 70vh;
   }
   .stories {
     min-height: 120px;

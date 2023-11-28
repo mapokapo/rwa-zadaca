@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS osnove</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let broj = 19;
+      let niz1 = "Niz znakova";
+      let niz2 = "3.14";
+      let niz3 = "U dva<br />retka";
+      let logicka = true;
+      document.write(broj, niz1, niz2, niz3, logicka);
+      logicka = false;
+      document.write(logicka);
+    </script>
+    <script type="text/javascript">
+      for (let i = 0; i < 100; i++) {
+        console.log(i + 1);
+        document.write(i + 1);
+      }
+    </script>
+    <script type="text/javascript">
+      let i = 0;
+      while (i < 100) {
+        if ((i + 1) % 2 === 0) {
+          console.log(i + 1);
+          document.write(i + 1);
+        }
+        i++;
+      }
+    </script>
+    <script type="text/javascript">
+      for (let i = 0; i < 200; i++) {
+        if ((i + 1) % 2 === 0) {
+          console.log(i + 1);
+          document.write(i + 1 + "<br />");
+          console.log((i + 1) * (i + 1));
+          document.write((i + 1) * (i + 1) + "<br />");
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      let n = 200;
+      let suma = 0;
+      for (let i = 1; i <= n; i++) {
+        suma += i;
+      }
+      document.write(suma / n);
+    </script>
+    <script type="text/javascript">
+      let polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 74, 11, 33);
+      document.write(polje.length);
+      polje.sort((a, b) => b - a);
+      for (let i = 0; i < polje.length; i++) {
+        document.write(polje[i]);
+      }
+      polje.sort((a, b) => a - b);
+      for (let i = 0; i < polje.length; i++) {
+        document.write(polje[i]);
+      }
+      polje = polje.slice(0, -1);
+      polje.push(19, 22);
+      let polje2 = new Array("Banana", "Orange", "Apple", "Mango");
+      let polje_final = new Array();
+      for (let i = 0; i < polje.length; i++) {
+        polje_final.push(polje[i]);
+      }
+      for (let i = 0; i < polje2.length; i++) {
+        polje_final.push(polje2[i]);
+      }
+      for (let i = 0; i < polje_final.length; i++) {
+        document.write(polje_final[i] + "<br />");
+      }
+    </script>
+  </body>
+</html>
