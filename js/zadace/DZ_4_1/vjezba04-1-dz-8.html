@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.1 - Zadatak 8</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function ispisiPosebne(polje) {
+        const novo = polje.filter(
+          (rijec) =>
+            rijec.split("").some((slovo) => slovo === slovo.toUpperCase()) ||
+            rijec.length >= 5
+        );
+        console.log(novo);
+        for (const i in novo) {
+          document.write(novo[i]);
+          if (i < novo.length - 1) {
+            document.write(", ");
+          } else {
+            document.write(".");
+          }
+        }
+      }
+      var arr = [
+        "Ovo",
+        "je",
+        "My",
+        "prvi",
+        "komad",
+        "OF",
+        "JAVASCRIPT",
+        "koda",
+        "Koji",
+        "je",
+        "proradio",
+      ];
+
+      ispisiPosebne(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.1 - Zadatak 7</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      const anonimna = function (n) {
+        if (typeof n === "number") {
+          return n * n;
+        } else {
+          return n + " nije broj!";
+        }
+      };
+
+      console.log(anonimna(5));
+      document.write(anonimna(5) + "<br />");
+
+      console.log(anonimna("5"));
+      document.write(anonimna("5") + "<br />");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.1 - Zadatak 9</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function ispisiSavrsene(n) {
+        for (let i = 1; i <= n; i++) {
+          let zbrojDjelitelja = 0;
+          for (let j = 1; j < i; j++) {
+            if (i % j === 0) {
+              zbrojDjelitelja += j;
+            }
+          }
+          if (zbrojDjelitelja === i) {
+            console.log(i);
+            document.write(i + "<br />");
+          }
+        }
+      }
+
+      ispisiSavrsene(10000);
+    </script>
+  </body>
+</html>

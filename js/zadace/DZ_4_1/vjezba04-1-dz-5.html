@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.1 - Zadatak 5</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      const objekt1 = {
+        firstName: "Marko",
+        lastName: "Maric",
+        age: 40,
+        eyeColor: "black",
+      };
+      const objekt2 = {
+        firstName: "Ivan",
+        lastName: "Ivic",
+        age: 30,
+        eyeColor: "blue",
+      };
+      const objekt3 = {
+        firstName: "Ana",
+        lastName: "Anic",
+        age: 20,
+        eyeColor: "green",
+      };
+      const objekt4 = {
+        firstName: "Iva",
+        lastName: "Ivic",
+        age: 10,
+        eyeColor: "brown",
+      };
+      const objekt5 = {
+        firstName: "Ivo",
+        lastName: "Ivic",
+        age: 50,
+        eyeColor: "black",
+      };
+      const polje = [objekt1, objekt2, objekt3, objekt4, objekt5];
+
+      for (const i in polje) {
+        document.write(
+          "[" + i + "] Objekt " + (parseInt(i) + 1) + " = {<br />"
+        );
+        document.write(
+          "&nbsp;&nbsp;&nbsp;&nbsp;" + polje[i].firstName + "<br />"
+        );
+        document.write(
+          "&nbsp;&nbsp;&nbsp;&nbsp;" + polje[i].lastName + "<br />"
+        );
+        document.write("&nbsp;&nbsp;&nbsp;&nbsp;" + polje[i].age + "<br />");
+        document.write(
+          "&nbsp;&nbsp;&nbsp;&nbsp;" + polje[i].eyeColor + "<br />"
+        );
+        document.write("}<br /><br />");
+      }
+    </script>
+  </body>
+</html>

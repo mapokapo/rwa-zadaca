@@ -530,16 +530,28 @@ details > ul {
   .wrapper {
     height: 100vh;
   }
+  .nav--list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .nav--item {
-    width: 100%;
+    width: 50%;
+    min-width: min-content;
     justify-content: center;
     display: flex;
+    padding: 0.25rem;
+    border-bottom: none !important;
   }
   .nav--details > summary {
     text-align: center;
   }
+  .nav--details[open] > summary {
+    border-bottom: 1px solid #bdc3c7;
+  }
   .nav--details > .nav--list {
     flex-direction: row;
+    flex-wrap: wrap;
     overflow-x: auto;
   }
   .nav--details > .nav--list > .nav--item:not(:last-child) {

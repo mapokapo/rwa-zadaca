@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.1 - Zadatak 4</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      let polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 12, 4, 85);
+
+      // a
+      document.write("Polje ima " + polje.length + " elemenata.<br />");
+
+      // b
+      polje.sort((a, b) => b - a);
+      for (const i in polje) {
+        document.write(polje[i]);
+        if (i < polje.length - 1) {
+          document.write(", ");
+        } else {
+          document.write("<br />");
+        }
+      }
+
+      // c
+      polje.sort((a, b) => a - b);
+      for (const i in polje) {
+        document.write(polje[i]);
+        if (i < polje.length - 1) {
+          document.write(", ");
+        } else {
+          document.write("<br />");
+        }
+      }
+
+      // d
+      polje = polje.slice(0, -1);
+      for (const i in polje) {
+        document.write(polje[i]);
+        if (i < polje.length - 1) {
+          document.write(", ");
+        } else {
+          document.write("<br />");
+        }
+      }
+
+      // e
+      polje.push(19, 22);
+      for (const i in polje) {
+        document.write(polje[i]);
+        if (i < polje.length - 1) {
+          document.write(", ");
+        } else {
+          document.write("<br />");
+        }
+      }
+
+      // f
+      const polje2 = ["Banana", "Orange", "Apple", "Mango"];
+      const polje_final = [];
+      for (const e of polje) {
+        polje_final.push(e);
+      }
+      for (const e of polje2) {
+        polje_final.push(e);
+      }
+      for (const i in polje_final) {
+        document.write(polje_final[i]);
+        if (i < polje_final.length - 1) {
+          document.write(", ");
+        } else {
+          document.write("<br />");
+        }
+      }
+    </script>
+  </body>
+</html>
