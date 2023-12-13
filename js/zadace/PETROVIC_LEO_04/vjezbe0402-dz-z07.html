@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 7</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <form>
+      <p>Unesite dan (01-31) <input type="text" name="dan" id="dan" /></p>
+      <p>
+        Unesite mjesec (01-12) <input type="text" name="mjesec" id="mjesec" />
+      </p>
+      <p>
+        Unesite godinu (npr. 1970)
+        <input type="text" name="godina" id="godina" />
+      </p>
+      <button type="submit">Izracunaj</button>
+    </form>
+
+    <script>
+      const forma = document.getElementsByTagName("form")[0];
+      const dan = document.getElementById("dan"),
+        mjesec = document.getElementById("mjesec"),
+        godina = document.getElementById("godina");
+
+      function izracunajGodine(datum) {
+        const razlikaMs = Date.now() - datum.getTime();
+        return Math.abs(new Date(razlikaMs).getUTCFullYear() - 1970);
+      }
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const danBroj = Number(dan.value.trim()),
+          mjesecBroj = Number(mjesec.value.trim()),
+          godinaBroj = Number(godina.value.trim());
+
+        if (isNaN(danBroj) || isNaN(mjesecBroj) || isNaN(godinaBroj)) {
+          alert("Uneseni podaci nisu ispravni!");
+          return;
+        }
+
+        if (danBroj < 1 || danBroj > 31) {
+          alert("Dan nije ispravan!");
+          return;
+        }
+
+        if (mjesecBroj < 1 || mjesecBroj > 12) {
+          alert("Mjesec nije ispravan!");
+          return;
+        }
+
+        if (godinaBroj < 1) {
+          alert("Godina nije ispravna!");
+          return;
+        }
+
+        const datum = new Date(godinaBroj, mjesecBroj - 1, danBroj);
+
+        alert(`Imate ${izracunajGodine(datum)} godina!`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 6</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <form>
+      <p>X = <input type="text" name="x" id="x" /></p>
+      <p>Y = <input type="text" name="y" id="y" /></p>
+      <button type="submit">Zbroji</button>
+    </form>
+    <input type="text" name="rezultat" id="rezultat" />
+
+    <script>
+      const forma = document.getElementsByTagName("form")[0];
+      const x = document.getElementById("x"),
+        y = document.getElementById("y"),
+        rezultat = document.getElementById("rezultat");
+
+      function zbroji(a, b) {
+        return a + b;
+      }
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const xBroj = Number(x.value.trim()),
+          yBroj = Number(y.value.trim());
+
+        if (isNaN(xBroj) || isNaN(yBroj)) {
+          alert("Brojevi nisu ispravni!");
+          return;
+        }
+
+        rezultat.value = zbroji(xBroj, yBroj);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 4</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" name="ocjena" id="ocjena" />
+    </form>
+
+    <script>
+      const forma = document.getElementsByTagName("form")[0];
+      const input = document.getElementById("ocjena");
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let poruka;
+        switch (input.value.trim()) {
+          case "1":
+            poruka = "Ocjena 1 - nedovoljan";
+            break;
+          case "2":
+            poruka = "Ocjena 2 - dovoljan";
+            break;
+          case "3":
+            poruka = "Ocjena 3 - dobar";
+            break;
+          case "4":
+            poruka = "Ocjena 4 - vrlo dobar";
+            break;
+          case "5":
+            poruka = "Ocjena 5 - odličan";
+            break;
+          default:
+            poruka = `Ocjena ${input.value.trim()} nije ispravna!`;
+            break;
+        }
+
+        const p = document.createElement("p");
+        p.innerHTML = poruka;
+        document.body.appendChild(p);
+      });
+    </script>
+  </body>
+</html>

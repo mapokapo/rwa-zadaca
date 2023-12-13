@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 9</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <div>
+      <button id="dugme">
+        <img src="./assets/off-dugme.png" id="dugme-slika" />
+      </button>
+      <img src="./assets/off-zarulja.png" id="slika" />
+    </div>
+
+    <script>
+      const dugme = document.getElementById("dugme");
+      const dugmeSlika = document.getElementById("dugme-slika"),
+        slika = document.getElementById("slika");
+
+      let upaljena = false;
+      dugme.addEventListener("click", () => {
+        if (upaljena) {
+          dugmeSlika.src = "./assets/off-dugme.png";
+          slika.src = "./assets/off-zarulja.png";
+        } else {
+          dugmeSlika.src = "./assets/on-dugme.png";
+          slika.src = "./assets/on-zarulja.png";
+        }
+
+        upaljena = !upaljena;
+      });
+    </script>
+  </body>
+</html>

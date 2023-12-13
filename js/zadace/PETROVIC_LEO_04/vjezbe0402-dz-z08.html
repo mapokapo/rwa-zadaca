@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 8</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <form>
+      <p><input type="text" name="a" id="a" /> operand1</p>
+      <p><input type="text" name="b" id="b" /> operand2</p>
+      <p>
+        <button type="submit" name="operacija" value="+">+</button>
+        <button type="submit" name="operacija" value="-">-</button>
+        <button type="submit" name="operacija" value="*">*</button>
+        <button type="submit" name="operacija" value="/">/</button>
+      </p>
+      <p>
+        <button type="submit" name="operacija" value="sin">sin</button>
+        <button type="submit" name="operacija" value="cos">cos</button>
+        <button type="submit" name="operacija" value="tan">tan</button>
+      </p>
+      <p>
+        <button type="submit" name="operacija" value="ln">ln</button>
+        <button type="submit" name="operacija" value="log">log</button>
+      </p>
+      <p>
+        <button type="submit" name="operacija" value="^2">^2</button>
+        <button type="submit" name="operacija" value="^3">^3</button>
+        <button type="submit" name="operacija" value="^n">^n</button>
+      </p>
+    </form>
+
+    <script>
+      const forma = document.getElementsByTagName("form")[0];
+      const a = document.getElementById("a"),
+        b = document.getElementById("b");
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const operacija = e.submitter.value;
+
+        const aBroj = Number(a.value.trim()),
+          bBroj = Number(b.value.trim());
+
+        if (isNaN(aBroj) || isNaN(bBroj)) {
+          alert("Brojevi nisu ispravni!");
+          return;
+        }
+
+        let rezultat;
+        switch (operacija) {
+          case "+":
+            rezultat = aBroj + bBroj;
+            break;
+          case "-":
+            rezultat = aBroj - bBroj;
+            break;
+          case "*":
+            rezultat = aBroj * bBroj;
+            break;
+          case "/":
+            rezultat = aBroj / bBroj;
+            break;
+          case "sin":
+            rezultat = Math.sin(aBroj);
+            break;
+          case "cos":
+            rezultat = Math.cos(aBroj);
+            break;
+          case "tan":
+            rezultat = Math.tan(aBroj);
+            break;
+          case "ln":
+            rezultat = Math.log(aBroj);
+            break;
+          case "log":
+            rezultat = Math.log10(aBroj);
+            break;
+          case "^2":
+            rezultat = Math.pow(aBroj, 2);
+            break;
+          case "^3":
+            rezultat = Math.pow(aBroj, 3);
+            break;
+          case "^n":
+            rezultat = Math.pow(aBroj, bBroj);
+            break;
+          default:
+            alert("Operacija nije ispravna!");
+            return;
+        }
+
+        alert(`Rezultat je ${rezultat}`);
+      });
+    </script>
+  </body>
+</html>

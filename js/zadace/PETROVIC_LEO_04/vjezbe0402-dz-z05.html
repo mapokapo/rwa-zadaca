@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 5</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" name="registracijski_broj" id="registracijski_broj" />
+      <button type="submit">Validacija</button>
+    </form>
+
+    <script>
+      const forma = document.getElementsByTagName("form")[0];
+      const input = document.getElementById("registracijski_broj");
+
+      function registracijskiBrojValidan(registracijskiBroj) {
+        const regex = /^[A-Z]\d{2}-[A-Z]-\d{3}$/;
+        return regex.test(registracijskiBroj);
+      }
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (registracijskiBrojValidan(input.value.trim())) {
+          alert("Registracijski broj je ispravan!");
+        } else {
+          alert("Registracijski broj nije ispravan!");
+        }
+      });
+    </script>
+  </body>
+</html>

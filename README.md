@@ -48,7 +48,6 @@ Struktura projekta je sljedeća:
 - `js/` - direktorij za vježbe, zadaće, i ostale JS dokumente
   - `zadace/` - direktorij za obavezne zadaće objavljene na SUMARUM-u
   - `vjezbe/` - direktorij koji sadrži urađene zadatke sa auditornih vježbi objavljenih na SUMARUM-u
-  - `scratch/` - direktorij koji sadrži zadatke i testne skripte sa predavanja i auditornih vježbi
 
 ## Odrađeni ciljevi
 

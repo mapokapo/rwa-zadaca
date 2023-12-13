@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 10</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <script language="javascript" type="text/javascript">
+      function dodajParagraf() {
+        const p = document.createElement("p");
+        p.innerHTML = "Novi paragraf teksta";
+        document.body.appendChild(p);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.getElementsByTagName("a")[0];
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          dodajParagraf();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><a href="#">Kliknite ovdje da dodate novi paragraf tekst</a></p>
+    <p id="thisLocation">Novi paragrafi teksta će se pojaviti ispod</p>
+    <p>Ovo je default-ni prvi paragraf teksta</p>
+  </body>
+</html>

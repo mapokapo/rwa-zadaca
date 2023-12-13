@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaća 4.2 - Zadatak 2</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <button id="dugme">Promijeni pozadinu</button>
+
+    <script>
+      const dugme = document.getElementById("dugme");
+
+      function generirajBoju() {
+        const hexMax = Math.pow(16, 6);
+        return "#" + Math.floor(Math.random() * hexMax).toString(16);
+      }
+
+      function promijeniBoju(boja) {
+        document.body.style.backgroundColor = boja;
+      }
+
+      dugme.addEventListener("click", () => {
+        const boja = generirajBoju();
+        promijeniBoju(boja);
+
+        const p = document.createElement("p");
+        p.innerHTML = `Boja: ${boja}`;
+        document.body.appendChild(p);
+      });
+    </script>
+  </body>
+</html>
